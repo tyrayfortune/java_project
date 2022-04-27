@@ -1,75 +1,71 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<%@ page isErrorPage="true"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!-- New line below to use the JSP Standard Tag Library -->
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ page isErrorPage="true" %>    
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta charset="ISO-8859-1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <title>Login</title>
 
 <!-- change to match your file/naming structure -->
-<script src="/webjars/jquery/jquery.min.js"></script>
-<script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
-
-
 <body>
-	<div class="container flex">
-		<p class="fs-1 text-warning bg-dark text-center">Welcome</p>
-		<div style="display: flex">
-			<form:form class="w-50 p-3 d-inline-block" method="POST"
-				action="/register" modelAttribute="newUser">
-				<p class="fs-3">Register</p>
-
-				
-				<div class="form-group ">
-					<label for="email">Email address</label>
-					<form:input path="email" type="email" class="form-control" />
-					<form:errors class="text-danger" path="email" />
-				</div>
-
-				<div class="form-group">
-					<label for="password">Password</label>
-					<form:input type="password" path="password" class="form-control" />
-					<form:errors class="text-danger" path="password" />
-				</div>
-
-				<div class="form-group">
-					<label for="confirm">Confirm password</label>
-					<form:input type="password" path="confirm" class="form-control" />
-					<form:errors class="text-danger" path="confirm" />
-				</div>
-
-				<div class="form-check">
-					<input type="checkbox" class="form-check-input" id="exampleCheck1">
-					<label class="form-check-label" for="exampleCheck1">Check
-						me out</label>
-				</div>
-				<button type="submit" class="btn btn-primary">Submit</button>
-			</form:form>
-
-			<!-- add modelAttribute="login" -->
-			<form:form class="w-50 p-3 inline-block" method="POST"
-				action="/login" modelAttribute="newLogin">
-				<p class="fs-3">Login</p>
-				<div class="form-group ">
-					<label for="email">Email address</label>
-					<form:input path="email" type="email" class="form-control" />
-					<form:errors class="text-danger" path="email" />
-				</div>
-
-				<div class="form-group">
-					<label for="password">Password</label>
-					<form:input type="password" path="password" class="form-control" />
-					<form:errors class="text-danger" path="password" />
-				</div>
-				<button type="submit" class="btn btn-primary">Submit</button>
+		<p>Welcome</p>
+	<div class="container">
+	<div class="row">
+	<div><h1>Welcome</h1></div>
+			<div class="col-sm">
+			<h1>New Instructor</h1>
+			<form:form action="/register" method="post" modelAttribute="newUser">
+								<p>
+					First Name:
+					<form:input path="firstName" />
+					<form:errors path="firstName" />
+				</p>
+				<p>
+					Name:
+					<form:input path="lastName" />
+					<form:errors path="lastName" />
+				</p>
+				<p>
+					Email:
+					<form:input path="email" />
+					<form:errors path="email" />
+				</p>
+				<p>
+					Password:
+					<form:input type="password" path="password" />
+					<form:errors path="password" />
+				</p>
+				<p>
+					Confirm Password:
+					<form:input type="password" path="confirm" />
+					<form:errors path="confirm" />
+				</p>
+				<button>Register</button>
 			</form:form>
 		</div>
-
-
+		
+		<div class="col-sm">
+			<h1>Login</h1>
+			<form:form action="/login" method="post" modelAttribute="newLogin">
+				<p>
+					Email:
+					<form:input path="email" />
+					<form:errors path="email" />
+				</p>
+				<p>
+					Password:
+					<form:input type="password" path="password" />
+					<form:errors path="password" />
+				</p>
+				<button>Login</button>
+			</form:form>	
+		</div>
+		</div>
 	</div>
 </body>
 </html>
