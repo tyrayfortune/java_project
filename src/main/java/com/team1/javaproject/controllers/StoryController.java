@@ -1,5 +1,7 @@
 package com.team1.javaproject.controllers;
 
+import java.util.List;
+
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
@@ -33,7 +35,7 @@ public class StoryController {
 	// ---------------- CREATE ------------------//
 	@GetMapping("/stories/new")
 	public String newStory(
-			HttpSession session,
+//			HttpSession session,
 			@ModelAttribute("story") Story emptyStory
 			
 	) {
@@ -47,7 +49,7 @@ public class StoryController {
 	
 	@PostMapping("/stories/new")
 	public String createStories(
-			@Valid @ModelAttribute("stories") Story filledStory,
+			@Valid @ModelAttribute("story") Story filledStory,
 			BindingResult results
 	) {
 		// CHECK FOR VALIDATIONS
@@ -58,14 +60,23 @@ public class StoryController {
 		else {
 			// VALIDATIONS PASSED
 			storyServ.save(filledStory);
-			return "redirect:/dashboard";
+			return "redirect:/stories";
 		}
 	}
 	
 	// ---------------- CREATE ------------------//
 	
+	// ---------------- READ --------------------//
+	@GetMapping("/stories")
+	public String stories(Model model) {
+		// RETRIEVE ALL Stories
+		List<Story> allStories = storyServ.getAllStories();
+		model.addAttribute("stories", allStories);
+		
+		return "story.jsp";
+	}
 	
-	
+	// ---------------- READ --------------------//
 	
 	
 	}
