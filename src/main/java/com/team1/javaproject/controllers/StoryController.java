@@ -35,15 +35,15 @@ public class StoryController {
 	// ---------------- CREATE ------------------//
 	@GetMapping("/stories/new")
 	public String newStory(
-//			HttpSession session,
+			HttpSession session,
 			@ModelAttribute("story") Story emptyStory
 			
 	) {
-		// CHECK TO SEE IF USER IS LOGGED IN
-//		if(session.getAttribute("user_id") == null) {
-//			return "redirect:/";
-//		}
-//		
+//		 CHECK TO SEE IF USER IS LOGGED IN
+		if(session.getAttribute("user_id") == null) {
+			return "redirect:";
+		}
+		
 		return "newStory.jsp";
 	}
 	
