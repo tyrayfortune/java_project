@@ -27,7 +27,7 @@ public class Story {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
-
+    @Column(columnDefinition="MEDIUMTEXT")
     @Size(min=20, message="Story must be longer than 20 characters")
     private String storyDescription;
 	
