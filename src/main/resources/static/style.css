@@ -1,0 +1,115 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    width: 1200px;
+    height: 2000px;
+    margin: 0px 50px;
+    border: solid black;
+}
+
+
+#titleNavBar {
+	display: flex;
+}
+
+#title {
+/* position: absolute; */
+	width: 513px;
+	height: 52px;
+	left: 20px;
+	top: 42px;
+	color: #3E4F7F;
+	font-family: arial;
+	font-style: normal;
+	font-size: 10px;
+	line-height: 41px;
+	align-items: center;
+	letter-spacing: -0.017em;
+	display: flex;
+	margin-left: 10px;
+}
+
+#hotline {
+/* position: absolute; */
+	width: 593px;
+	height: 42px;
+	left: 704px;
+	top: 0px;
+	font-family: arial;
+	font-style: normal;
+	font-size: 10px;
+	/* line-height: 29px; */
+	display: flex;
+	align-items: top;
+	letter-spacing: -0.017em;
+	color: #FF0606;
+	justify-content: space-between;
+}
+
+#hotline a{
+	font-family: arial;
+	color: #3E4F7F;
+}
+
+#quickLinks a {
+	font-size: 15px;
+	font-family: arial;
+	width: 668px;
+	height: 56px;
+	left: 704px;
+	top: 81px;
+	text-decoration: none;
+	color: #3E4F7F;
+	padding-right: 15px;
+}
+
+#backgroundImg {
+	width: 1200px
+}
+
+#resourceRow {
+	display: flex;
+	margin-left: 20px;
+	margin-top: 10px;
+}
+
+#firstSecondResource{
+	width: 400px;
+	margin-right: 100px;
+}
+
+#firstResource {
+	margin-bottom: 20px;
+}
+
+#firstResource a {
+	font-family: arial;
+	font-size: 20px;
+	color: #3E4F7F;
+	text-decoration: none;
+}
+
+#familyPhoto {
+	width: 300px;
+}
+
+#secondResource a {
+	font-family: arial;
+	font-size: 20px;
+	color: #3E4F7F;
+	text-decoration: none;
+}
+
+#ptsdPhoto {
+	width: 300px;
+}
+
+#thirdResource {
+	font-family: arial;
+	font-size: 20px;
+	color: #3E4F7F;
+	

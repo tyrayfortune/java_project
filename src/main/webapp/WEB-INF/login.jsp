@@ -26,12 +26,7 @@
 				action="/register" modelAttribute="newUser">
 				<p class="fs-3">Register</p>
 
-				<div class="form-group ">
-					<label for="username">User Name</label>
-					<form:input path="username" type="text" class="form-control" />
-					<form:errors class="text-danger" path="username" />
-				</div>
-
+				
 				<div class="form-group ">
 					<label for="email">Email address</label>
 					<form:input path="email" type="email" class="form-control" />
