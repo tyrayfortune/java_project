@@ -41,7 +41,7 @@ public class StoryController {
 	) {
 //		 CHECK TO SEE IF USER IS LOGGED IN
 		if(session.getAttribute("user_id") == null) {
-			return "redirect:";
+			return "redirect:/login";
 		}
 		
 		return "newStory.jsp";

@@ -11,5 +11,29 @@
 </head>
 <body>
   <h1> Success Stories</h1>
+  	<div>
+  		<a href="/stories/new">Create your own Story</a>
+  		<p>(must be logged in)</p>
+  	</div>
+  	<div>
+  	<a href="/logout">Logout</a>
+  	</div>
+  
+  	<table>
+  	  <tbody>
+  	  	<c:forEach var="story" items="${stories}">
+    		<tr>
+      			<td>Commented by: <c:out value="${story.creator.firstName}"/> <textarea rows = "6"  cols ="100"><c:out value="${story.storyDescription}"/></textarea></td>
+    		</tr>
+		</c:forEach>
+  	</tbody>
+  	
+  	</table>
+  		
+		
+		
+  
+  
+  
 </body>
 </html>
