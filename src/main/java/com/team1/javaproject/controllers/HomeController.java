@@ -21,65 +21,65 @@ import com.team1.javaproject.services.UserService;
 
 @Controller
 public class HomeController {
-	@Autowired
-	// CHANGE
-	private UserService userService;
+	// Add once service is implemented:
+	 @Autowired
+	 private UserService userServ;
+   
+   @GetMapping("/login")
+   public String index(
+   		Model model
+	) {
+       // Bind empty User and LoginUser objects to the JSP
+       // to capture the form input
+       model.addAttribute("newUser", new User());
+       model.addAttribute("newLogin", new LoginUser());
+       return "login.jsp";
+   }
+   
+   @PostMapping("/register")
+   public String register(
+   		@Valid @ModelAttribute("newUser") User newUser, 
+           BindingResult result,
+           Model model, HttpSession session
+   ) {
+       
+       // CREATE THE USER
+   	User registeredUser = userServ.register(newUser, result);
+       
+       if(result.hasErrors()) {
+           // Be sure to send in the empty LoginUser before 
+           // re-rendering the page.
+           model.addAttribute("newLogin", new LoginUser());
+           return "login.jsp";
+       }
+       // No errors! 
+       // Store their ID from the DB in session, in other words, log them in.
 
-	@Autowired
-	// TODO
-	private StoryService storyService;
-
-	@GetMapping("/login")
-	public String index(Model model, HttpSession session) {// change model
-		if (session.getAttribute("username") != null) {
-			model.addAttribute("username", session.getAttribute("username"));
-			return "dashboard.jsp";
-		} else {
-			model.addAttribute("newUser", new User());
-			model.addAttribute("newLogin", new LoginUser());
-			return "login.jsp";
-		}
-
-	}
-
-	@PostMapping("/register")
-	public String register(@Valid @ModelAttribute("newUser") User newUser, BindingResult result, Model model,
-			HttpSession session) {
-
-		if (result.hasErrors()) {
-			model.addAttribute("newLogin", new LoginUser());
-
-			return "login.jsp";
-		}
-		User user = userService.register(newUser, result);
-
-		if (result.hasErrors()) {
-			System.out.println(result);
-			return null;
-		}
-
-//		session.setAttribute("username", newUser.getUsername());
-
-		return "dashboard.jsp";
-	}
-
-	@PostMapping("/login")
-	public String login(@Valid @ModelAttribute("newLogin") LoginUser newLogin, BindingResult result, Model model,
-			HttpSession session) {
-
-		User user = userService.login(newLogin, result);
-
-		if (result.hasErrors()) {
-			model.addAttribute("newUser", new User());
-			return "";// TODO
-		} else if (user != null) {
-//			session.setAttribute("username", user.getUsername());
-
-		}
-		return "redirect:/";
-
-	}
-
+       session.setAttribute("user_id", registeredUser.getId());
+       return "redirect:/";
+   }
+   
+   @PostMapping("/login")
+   public String login(
+   		@Valid @ModelAttribute("newLogin") LoginUser newLogin, 
+           BindingResult result, 
+           Model model, HttpSession session
+   ) {
+       
+       // Add once service is implemented:
+       User user = userServ.login(newLogin, result);
+   
+       if(result.hasErrors()) {
+           model.addAttribute("newUser", new User());
+           return "login.jsp";
+       }
+       // No errors! 
+       // Store their ID from the DB in session, in other words, log them in.
+       session.setAttribute("user_id", user.getId());
+       return "redirect:/";
+   }
+   
+   
 	@GetMapping("/logout")
 	public String logout(HttpSession session) {
 		session.removeAttribute("username");
