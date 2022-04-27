@@ -20,7 +20,7 @@
 					<a href="">Login / Register</a>
 				</div>
 				<div id="quickLinks">
-					<a href="">Family Resource</a>
+					<a href="/resources">Family Resource</a>
 					<a href="">PTSD Resources</a>
 					<a href="">Success Stories</a>
 					<a href="">Chat Room</a>

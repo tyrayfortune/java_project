@@ -8,8 +8,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Login</title>
-<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet" href="/css/main.css">
+
 <!-- change to match your file/naming structure -->
 <script src="/webjars/jquery/jquery.min.js"></script>
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
@@ -18,8 +17,6 @@
 
 <body>
 	<div class="container flex">
-	session:
-	${session}
 		<p class="fs-1 text-warning bg-dark text-center">Welcome</p>
 		<div style="display: flex">
 			<form:form class="w-50 p-3 d-inline-block" method="POST"
