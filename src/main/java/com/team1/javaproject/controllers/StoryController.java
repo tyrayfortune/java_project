@@ -1,10 +1,13 @@
 package com.team1.javaproject.controllers;
 
+import java.util.List;
+
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -25,7 +28,7 @@ public class StoryController {
 	// ---------------- CREATE ------------------//
 	@GetMapping("/stories/new")
 	public String newStory(
-			HttpSession session,
+//			HttpSession session,
 			@ModelAttribute("story") Story emptyStory
 			
 	) {
@@ -39,7 +42,7 @@ public class StoryController {
 	
 	@PostMapping("/stories/new")
 	public String createStories(
-			@Valid @ModelAttribute("stories") Story filledStory,
+			@Valid @ModelAttribute("story") Story filledStory,
 			BindingResult results
 	) {
 		// CHECK FOR VALIDATIONS
@@ -50,14 +53,23 @@ public class StoryController {
 		else {
 			// VALIDATIONS PASSED
 			storyServ.save(filledStory);
-			return "redirect:/dashboard";
+			return "redirect:/stories";
 		}
 	}
 	
 	// ---------------- CREATE ------------------//
 	
+	// ---------------- READ --------------------//
+	@GetMapping("/stories")
+	public String stories(Model model) {
+		// RETRIEVE ALL Stories
+		List<Story> allStories = storyServ.getAllStories();
+		model.addAttribute("stories", allStories);
+		
+		return "story.jsp";
+	}
 	
-	
+	// ---------------- READ --------------------//
 	
 	
 	}

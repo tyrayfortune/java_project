@@ -40,7 +40,7 @@
 		<div class="thirdResource">
 			<h3>Services near you</h3>
 		</div>
-		
+	
 		
 	</div>
 </body>
