@@ -21,7 +21,7 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="/dashboard.jsp">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="#!">Resources</a></li>
                         <li class="nav-item"><a class="nav-link" href="#!">Success Stories</a></li>
                         <li class="nav-item"><a class="nav-link" href="#!">VetChat</a></li>
@@ -37,7 +37,7 @@
                 <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="https://www.ocfusa.org/wp-content/uploads/2017/10/leader-touch-website-16.jpg" alt="..." /></div>
                 <div class="col-lg-5">
                     <h1 class="font-weight-light">VetChat</h1>
-                    <p>This function allows all signed in users to chat with and exchange information with other users across our platfrom</p>
+                    <p>This function allows all signed in users to chat with and exchange information with other users across our platform</p>
                     <a class="btn btn-primary" href="#!">Chat</a>
                 </div>
             </div>
