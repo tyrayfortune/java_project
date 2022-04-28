@@ -16,7 +16,7 @@
 	display: flex;
 }
 
-#title {
+#title a {
 /* position: absolute; */
 	width: 513px;
 	height: 52px;
@@ -25,13 +25,15 @@
 	color: #3E4F7F;
 	font-family: arial;
 	font-style: normal;
-	font-size: 10px;
+	font-size: 20px;
 	line-height: 41px;
 	align-items: center;
 	letter-spacing: -0.017em;
 	display: flex;
 	margin-left: 10px;
+	text-decoration: none;
 }
+
 
 #hotline {
 /* position: absolute; */
@@ -112,4 +114,22 @@
 	font-family: arial;
 	font-size: 20px;
 	color: #3E4F7F;
+}
+
+#firstResource {
+	font-family: arial;
+	font-size: 20px;
+	color: #3E4F7F;
+	text-decoration: none;
+}
+
+#register {
+	display: flex;
+	gap: 10px;
+
+}
+
+#login {
+	display: flex;
+	gap: 10px;
 }
