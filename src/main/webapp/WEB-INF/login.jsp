@@ -33,12 +33,12 @@
 				</div>
 			</div>
 		</div>
-		<img id="backgroundImg" src="primary_background_img.png" alt="primary_background_img">
+		<img class="backgroundImg" src="/primary_background_img.png" alt="primary_background_img">
 		<div id="resourceRow">	
 			<div id="firstSecondResource">	
-				<div id="firstResource">
+				<div id="registerTitle">
 					<div>
-						<h3>Register</h3>
+						<p>Register</p>
 							<form:form action="/register" method="post" modelAttribute="newUser">
 								<div id="register">
 									<div>
@@ -78,7 +78,7 @@
 			</div>
 			<div id="thirdResource">
 				<div>
-					<h3>Login</h3>
+					<p>Login</p>
 					<form:form action="/login" method="post" modelAttribute="newLogin">
 					<div id="login">	
 						<div>

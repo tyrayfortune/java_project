@@ -69,7 +69,7 @@
 	padding-right: 15px;
 }
 
-#backgroundImg {
+.backgroundImg {
 	width: 1200px
 }
 
@@ -99,6 +99,13 @@
 	width: 300px;
 }
 
+#secondResource p {
+	font-family: arial;
+	font-size: 15px;
+	color: #3E4F7F;
+	text-decoration: none;
+}
+
 #secondResource a {
 	font-family: arial;
 	font-size: 20px;
@@ -112,6 +119,13 @@
 
 #thirdResource {
 	font-family: arial;
+	font-size: 15px;
+	color: #3E4F7F;
+}
+
+
+#thirdResource p {
+	font-family: arial;
 	font-size: 20px;
 	color: #3E4F7F;
 }
@@ -123,13 +137,74 @@
 	text-decoration: none;
 }
 
+#firstResource {
+	font-family: arial;
+	font-size: 20px;
+	color: #3E4F7F;
+	text-decoration: none;
+}
+
+#firstResource p {
+	font-family: arial;
+	font-size: 15px;
+	color: #3E4F7F;
+	text-decoration: none;
+}
+
+#registerTitle p {
+	font-family: arial;
+	font-size: 20px;
+	color: #3E4F7F;
+	text-decoration: none;
+}
+
 #register {
 	display: flex;
 	gap: 10px;
+	font-family: arial;
+	font-size: 15px;
+	color: #3E4F7F;
 
 }
+
 
 #login {
 	display: flex;
 	gap: 10px;
+}
+
+#addStory {
+	font-family: arial;
+	font-size: 20px;
+	color: #3E4F7F;
+	text-decoration: none;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+
+#addStorySub {
+	font-family: arial;
+	font-size: 15px;
+	color: #3E4F7F;
+	text-decoration: none;
+	margin-left: 20px;
+
+}
+
+#successTitle {
+	font-family: arial;
+	font-size: 20px;
+	color: #3E4F7F;
+	text-decoration: none;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+
+#successStories {
+	font-family: arial;
+	font-size: 15px;
+	color: #3E4F7F;
+	text-decoration: none;
+	margin-left: 20px;
+	margin-top: 20px;
 }

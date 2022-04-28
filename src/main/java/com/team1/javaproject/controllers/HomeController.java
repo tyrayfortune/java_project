@@ -86,11 +86,16 @@ public class HomeController {
    }
    
    
+	// ---------------- Logout -------------------//
 	@GetMapping("/logout")
 	public String logout(HttpSession session) {
-		session.removeAttribute("username");
+
+		if(session.getAttribute("user_id") != null) 
+		    session.invalidate();
 		return "redirect:/";
+
 	}
+	// ---------------- Logout -------------------//
 
 }
 

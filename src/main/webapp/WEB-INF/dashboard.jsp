@@ -18,6 +18,7 @@
 				<div id="hotline">
 					<h2>24/7 SUPPORT HOTLINE PHONE NUMBER 1-800-342-9647</h2>
 					<a href="/login">Login / Register</a>
+					<a href="/logout">Logout</a>
 				</div>
 				<div id="quickLinks">
 					<a href="/resources">Family Resource</a>
@@ -28,7 +29,7 @@
 				</div>
 			</div>
 		</div>
-		<img id="backgroundImg" src="primary_background_img.png" alt="primary_background_img">
+		<img class="backgroundImg" src="/primary_background_img.png" alt="primary_background_img">
 		<div id="resourceRow">	
 			<div id="firstSecondResource">	
 				<div id="firstResource">
