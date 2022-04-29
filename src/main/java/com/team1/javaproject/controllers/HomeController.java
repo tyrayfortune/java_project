@@ -1,7 +1,5 @@
 package com.team1.javaproject.controllers;
 
-import java.util.List;
-
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
@@ -14,9 +12,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.team1.javaproject.models.LoginUser;
-import com.team1.javaproject.models.Story;
 import com.team1.javaproject.models.User;
-import com.team1.javaproject.services.StoryService;
 import com.team1.javaproject.services.UserService;
 
 @Controller
@@ -35,6 +31,16 @@ public class HomeController {
        model.addAttribute("newLogin", new LoginUser());
        return "login.jsp";
    }
+   
+   @GetMapping("/resources")
+   public String resources() {
+   		return "resources.jsp";
+   }
+   
+//   @GetMapping("/stories")
+//   public String resources() {
+//   		return "resources.jsp";
+//   }
    
    @PostMapping("/register")
    public String register(
