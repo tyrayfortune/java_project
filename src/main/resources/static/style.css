@@ -6,7 +6,7 @@
 
 #container {
     width: 1200px;
-    height: 2000px;
+    min-height: 2000px;
     margin: 0px 50px;
     border: solid black;
 }
@@ -204,6 +204,20 @@
 
 }
 
+#addStorySub button {
+	cursor: pointer;
+
+}
+
+#addStorySub a {
+	background: #efefef;
+	border: solid #767676;
+	border-width: thin;
+	text-decoration: none;
+	color: black;
+	border-radius: 2px;
+}
+
 #successTitle {
 	font-family: arial;
 	font-size: 20px;
@@ -228,8 +242,23 @@
 }
 
 #storyCol2 {
-	width: 600px;
+	width: 700px;
 	align-content: center;
+	
+}
+
+#storyEdit {
+	display: flex;
+	align-content: center;
+	
+}
+
+#storyAuthor {
+	margin-right: 50px;
+}
+
+#edit {
+	align-self: center;
 	
 }
 
