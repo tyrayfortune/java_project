@@ -1,6 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="/static/styles.css" rel="stylesheet" type="text/css"> 
+<link rel="stylesheet" href="${pageContext.request.contextPath}/styles.css" />
+<title>Resources</title>
+</head>
+
 <html lang="en">
     <head>
         <meta charset="utf-8" />
@@ -14,8 +22,9 @@
        <!--  <link href="css/styles.css" rel="stylesheet" /> -->
         <link rel="stylesheet" href="${pageContext.request.contextPath}/styles.css" />
     </head>
+
     <body>
-        <!-- Responsive navbar-->
+        <!--Navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container px-5">
                 <a class="navbar-brand" href="/">Family Resource</a>
