@@ -204,6 +204,20 @@
 
 }
 
+#addStorySub button {
+	cursor: pointer;
+
+}
+
+#addStorySub a {
+	background: #efefef;
+	border: solid #767676;
+	border-width: thin;
+	text-decoration: none;
+	color: black;
+	border-radius: 2px;
+}
+
 #successTitle {
 	font-family: arial;
 	font-size: 20px;
@@ -228,22 +242,24 @@
 }
 
 #storyCol2 {
-	width: 600px;
+	width: 700px;
 	align-content: center;
 	
 }
 
 #storyEdit {
 	display: flex;
-	/* vertical-align: bottom; */
+	align-content: center;
+	
+}
+
+#storyAuthor {
+	margin-right: 50px;
 }
 
 #edit {
-	/* vertical-align: center; */
-	/* text-align: center; */
-	/* margin-top: 50%; */
-	/* text-align: middle; */
-	/* top: 50%; */
+	align-self: center;
+	
 }
 
 #author{

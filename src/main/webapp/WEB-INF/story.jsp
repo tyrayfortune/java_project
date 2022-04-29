@@ -44,23 +44,23 @@
 			<div id="storyCol2">
 					<c:forEach var="story" items="${stories}">
 					<div id="storyEdit">
-					<div>
-					<div>
-	      			"<c:out value="${story.storyDescription}"/>" 
-	      			<br>
-	  				</div>
-	  				
-	      			<div id="author">
-	      			- <c:out value="${story.creator.firstName}"/>
-	      			</div>
-	      			<br> 
-	      			</div>
-	      			<div >
-	      			<c:if test="${story.getCreator().getId()==loggedInUser.id}">
-					<a href="/stories/${ story.getId() }/edit" id="edit">edit</a>
-					</c:if>   
-					<br>
-					</div>	
+						<div id="storyAuthor">
+							<div>
+			      			"<c:out value="${story.storyDescription}"/>" 
+			      			<br>
+			  				</div>
+			  				<br>
+			      			<div id="author">
+			      			- <c:out value="${story.creator.firstName}"/>
+			      			</div>
+		      				<br> 
+		      			</div>
+		      			<div id="edit">
+		      				<c:if test="${story.getCreator().getId()==loggedInUser.id}">
+							<a href="/stories/${ story.getId() }/edit">edit/delete</a>
+							</c:if>   
+							<br>
+						</div>	
 					</div>
 					</c:forEach>
 					<br>
