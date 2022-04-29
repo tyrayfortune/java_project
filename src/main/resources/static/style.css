@@ -77,15 +77,18 @@
 	display: flex;
 	margin-left: 20px;
 	margin-top: 10px;
+	justify-content: space-around;
 }
 
 #firstSecondResource{
-	width: 400px;
-	margin-right: 100px;
+	/* width: 400px; */
+	/* margin-right: 100px; */
 }
 
 #firstResource {
 	margin-bottom: 20px;
+	align-content: middle;
+	width: 300px;
 }
 
 #firstResource a {
@@ -118,7 +121,7 @@
 }
 
 #thirdResource {
-	width: 400px;
+	width: 300px;
 	font-family: arial;
 	font-size: 15px;
 	color: #3E4F7F;
@@ -217,5 +220,26 @@
 	text-decoration: none;
 	margin-left: 20px;
 	margin-top: 20px;
+	display: flex;
+}
+
+#storyCol1 {
+	margin-right: 100px;
+}
+
+#storyCol2 {
+	width: 600px;
+	align-content: center;
+	
+}
+
+#author{
+	text-align: right;	
+}
+
+#mustBeLoggedIn {
+	font-family: arial;
+	font-size: 10px;
+	color: #3E4F7F;
 }
 	

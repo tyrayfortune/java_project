@@ -76,7 +76,7 @@ public class StoryController {
 		return "story.jsp";
 	}
 	
-	// ---------------- READ --------------------//
+	// ---------------- EDIT --------------------//
 	
 	
 	}
