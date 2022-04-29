@@ -11,11 +11,10 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import com.team1.javaproject.models.LoginUser;
 import com.team1.javaproject.models.Story;
-import com.team1.javaproject.models.User;
 import com.team1.javaproject.services.StoryService;
 import com.team1.javaproject.services.UserService;
 
@@ -76,7 +75,27 @@ public class StoryController {
 		return "story.jsp";
 	}
 	
-	// ---------------- EDIT --------------------//
-	
+	// //// EDIT COURSE /////////////
+		@GetMapping("/stories/{id}/edit")
+		public String editView(@PathVariable("id") Long id,Model model) {
+			Story story = storyServ.getOneStory(id);
+			model.addAttribute("story", story);
+			return "editStory.jsp";
+		}
+		@PostMapping("/stories/{id}")
+		public String update(@PathVariable("id") Long id, @Valid @ModelAttribute("story") Story story, BindingResult result) {
+			if (result.hasErrors()) {
+				return "editStory";
+			} else {
+				storyServ.save(story);
+				return "redirect:/stories";
+			}
+		}
+		// ---------------- DELETE --------------------//
+		@GetMapping("/stories/{id}/delete")
+		  public String destroy(@PathVariable("id") Long id) {
+			storyServ.deleteOneStory(id);
+		  	return "redirect:/stories";
+		}
 	
 	}
