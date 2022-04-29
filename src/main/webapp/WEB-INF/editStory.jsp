@@ -38,16 +38,25 @@
 			<p>however you overcame your struggles can help lift another person out of their own!
 			</p>
 		<br>
+
+			
+
 			<form:form action="/stories/${story.getId()}" method="post" modelAttribute="story">
+
 				<form:input type="hidden" path="creator" value="${user_id}" />
 				<p>My success story:</p>
 				<form:textarea path="storyDescription" placeholder="Enter text here!" rows = "25"  cols ="80"/>
 				<form:errors path="storyDescription" />
 				<br>
+
+				<button>Create</button>
+			
+
 				<button>Update</button>
 				<a href="/stories/${story.getId()}/delete">Delete</a>		
 				<a href="/stories">Cancel</a>
 			</form:form>
+
 		</div>
 	</div>
 </body>
