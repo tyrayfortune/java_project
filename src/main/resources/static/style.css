@@ -118,17 +118,28 @@
 }
 
 #thirdResource {
+	width: 400px;
 	font-family: arial;
 	font-size: 15px;
 	color: #3E4F7F;
 }
 
 
-#thirdResource p {
+#thirdResource a {
 	font-family: arial;
 	font-size: 20px;
 	color: #3E4F7F;
+	text-decoration: none;
 }
+
+#loginTitle {
+	font-family: arial;
+	font-size: 20px;
+	color: #3E4F7F;
+	text-decoration: none;
+}
+
+
 
 #firstResource {
 	font-family: arial;
@@ -164,7 +175,6 @@
 	font-family: arial;
 	font-size: 15px;
 	color: #3E4F7F;
-
 }
 
 

@@ -39,35 +39,44 @@
 				<div id="registerTitle">
 					<div>
 						<p>Register</p>
+						<br>
 							<form:form action="/register" method="post" modelAttribute="newUser">
 								<div id="register">
 									<div>
 										First Name:
 										<br>
+										<br>
 										Last Name:
+										<br>
 										<br>
 										Email:
 										<br>
+										<br>
 										Password:
+										<br>
 										<br>
 										Confirm 
 										<br>
 										Password:
 									</div>
 									<div>
-										<form:input path="firstName" />
+										<form:input path="firstName" placeholder="First Name" />
 										<form:errors path="firstName" />
 										<br>
-										<form:input path="lastName" />
+										<br>
+										<form:input path="lastName" placeholder="Last Name"/>
 										<form:errors path="lastName" />
 										<br>
-										<form:input path="email" />
+										<br>
+										<form:input path="email" placeholder="Email"/>
 										<form:errors path="email" />
 										<br>
-										<form:input type="password" path="password" />
+										<br>
+										<form:input type="password" path="password" placeholder="Password"/>
 										<form:errors path="password" />
 										<br>
-										<form:input type="password" path="confirm" />
+										<br>
+										<form:input type="password" path="confirm" placeholder="Confirm PW" />
 										<form:errors path="confirm" />
 									</div>
 								</div>
@@ -78,19 +87,24 @@
 			</div>
 			<div id="thirdResource">
 				<div>
-					<p>Login</p>
+					<div id="loginTitle">
+						<p>Login</p>
+					</div>	
+					<br>
 					<form:form action="/login" method="post" modelAttribute="newLogin">
 					<div id="login">	
 						<div>
 							Email:
 							<br>
+							<br>
 							Password:
 						</div>
 						<div>
-							<form:input path="email" />
+							<form:input path="email" placeholder="Email" />
 							<form:errors path="email" />
 							<br>
-							<form:input type="password" path="password" />
+							<br>
+							<form:input type="password" path="password" placeholder="Password"/>
 							<form:errors path="password" />
 						</div>
 					</div>
