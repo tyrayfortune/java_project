@@ -16,7 +16,7 @@
 	display: flex;
 }
 
-#title {
+#title a {
 /* position: absolute; */
 	width: 513px;
 	height: 52px;
@@ -25,13 +25,15 @@
 	color: #3E4F7F;
 	font-family: arial;
 	font-style: normal;
-	font-size: 10px;
+	font-size: 20px;
 	line-height: 41px;
 	align-items: center;
 	letter-spacing: -0.017em;
 	display: flex;
 	margin-left: 10px;
+	text-decoration: none;
 }
+
 
 #hotline {
 /* position: absolute; */
@@ -67,7 +69,7 @@
 	padding-right: 15px;
 }
 
-#backgroundImg {
+.backgroundImg {
 	width: 1200px
 }
 
@@ -75,15 +77,18 @@
 	display: flex;
 	margin-left: 20px;
 	margin-top: 10px;
+	justify-content: space-around;
 }
 
 #firstSecondResource{
-	width: 400px;
-	margin-right: 100px;
+	/* width: 400px; */
+	/* margin-right: 100px; */
 }
 
 #firstResource {
 	margin-bottom: 20px;
+	align-content: middle;
+	width: 300px;
 }
 
 #firstResource a {
@@ -95,6 +100,13 @@
 
 #familyPhoto {
 	width: 300px;
+}
+
+#secondResource p {
+	font-family: arial;
+	font-size: 15px;
+	color: #3E4F7F;
+	text-decoration: none;
 }
 
 #secondResource a {
@@ -109,7 +121,125 @@
 }
 
 #thirdResource {
+	width: 300px;
+	font-family: arial;
+	font-size: 15px;
+	color: #3E4F7F;
+}
+
+
+#thirdResource a {
 	font-family: arial;
 	font-size: 20px;
 	color: #3E4F7F;
+	text-decoration: none;
+}
+
+#loginTitle {
+	font-family: arial;
+	font-size: 20px;
+	color: #3E4F7F;
+	text-decoration: none;
+}
+
+
+
+#firstResource {
+	font-family: arial;
+	font-size: 20px;
+	color: #3E4F7F;
+	text-decoration: none;
+}
+
+#firstResource {
+	font-family: arial;
+	font-size: 20px;
+	color: #3E4F7F;
+	text-decoration: none;
+}
+
+#firstResource p {
+	font-family: arial;
+	font-size: 15px;
+	color: #3E4F7F;
+	text-decoration: none;
+}
+
+#registerTitle p {
+	font-family: arial;
+	font-size: 20px;
+	color: #3E4F7F;
+	text-decoration: none;
+}
+
+#register {
+	display: flex;
+	gap: 10px;
+	font-family: arial;
+	font-size: 15px;
+	color: #3E4F7F;
+}
+
+
+#login {
+	display: flex;
+	gap: 10px;
+}
+
+#addStory {
+	font-family: arial;
+	font-size: 20px;
+	color: #3E4F7F;
+	text-decoration: none;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+
+#addStorySub {
+	font-family: arial;
+	font-size: 15px;
+	color: #3E4F7F;
+	text-decoration: none;
+	margin-left: 20px;
+
+}
+
+#successTitle {
+	font-family: arial;
+	font-size: 20px;
+	color: #3E4F7F;
+	text-decoration: none;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+
+#successStories {
+	font-family: arial;
+	font-size: 15px;
+	color: #3E4F7F;
+	text-decoration: none;
+	margin-left: 20px;
+	margin-top: 20px;
+	display: flex;
+}
+
+#storyCol1 {
+	margin-right: 100px;
+}
+
+#storyCol2 {
+	width: 600px;
+	align-content: center;
+	
+}
+
+#author{
+	text-align: right;	
+}
+
+#mustBeLoggedIn {
+	font-family: arial;
+	font-size: 10px;
+	color: #3E4F7F;
+}
 	
