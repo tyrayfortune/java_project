@@ -1,20 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Veteran Resources</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="/static/styles.css" rel="stylesheet" type="text/css"> 
+<link rel="stylesheet" href="${pageContext.request.contextPath}/styles.css" />
+<title>Resources</title>
+</head>
     <body>
-        <!-- Responsive navbar-->
+        <!--Navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container px-5">
                 <a class="navbar-brand" href="#!">Veteran Resources</a>
